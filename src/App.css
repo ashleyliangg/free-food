@@ -3,14 +3,16 @@
 .App {
   text-align: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .cardbox {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 200px;
-  height: 250px;
+  padding: 20px;
+  /* width: 200px; */
+  /* height: 250px; */
 }
 
 .innerbox {
@@ -21,7 +23,7 @@
   margin-bottom: 10px;
 /* 
   position: absolute; */
-  width: 360px;
+  width: 300px;
   height: 270px;
 
   border-radius: 5%;
@@ -42,7 +44,7 @@ body {
 
 }
 
-.tile {
+/* .tile {
   box-sizing: border-box;
   background: #F4F5F4;
   border-radius: 5px;
@@ -54,17 +56,21 @@ body {
   max-height: 250;
   text-align: center;
   line-height: 200px;
-}
+} */
 
 .tiles {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background-color: #81F6B0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* padding: 20px; */
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  /* margin: 20px; */
+  /* margin-left: 20px;
+  margin-right: 20px; */
   
 }
 
@@ -100,7 +106,7 @@ div#banner-content {
   font-size: 2em;
 }
 div#main-content { 
-  padding-top: 60px;
+  margin-top: 75px;
   background-color: #81F6B0;
   font-family: Inter;
 }
@@ -199,7 +205,6 @@ div#fourth {
 }
 
 .myButton{
- background-color: #ce2b9f;
  color: #000;
  font-family: Trebuchet MS;
  font-size: 18px;
@@ -211,10 +216,36 @@ div#fourth {
  border-radius: 10px;
  display: inline-block;
 }
-.myButton:hover{
+/* .myButton:hover{
  background-color: #d35aab;
-}
+} */
 
 .myButton:active{
  transform: scale(0.95);
 }
+
+.submitButton{
+  background-color: #81F6B0;
+  color: #000;
+  font-family: Trebuchet MS;
+  font-size: 15px;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 3px solid #51E28B;
+  border-radius: 10px;
+  display: inline-block;
+ }
+ .submitButton:hover{
+  background-color: #51E28B;;
+ }
+ 
+ .submitButton:active{
+  transform: scale(0.95);
+ }
+
+ .error {
+  color: red;
+  font-size: 12px;
+ }
