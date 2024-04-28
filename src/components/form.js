@@ -2,16 +2,21 @@ import React from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useRouter } from "next/router"
-import { connect } from 'react-redux';
-import { adddata } from '../actions';
-import { app, database } from '../firebase/firebaseConfig';
-import { collection, addDoc } from 'firebase/firestore'; 
+import { useDispatch } from "react-redux";
+import { addFoodToFirestore } from "../redux/foodSlice";
 
-const Form = (props) => {  
-    const collectionRef = collection(database, "food-info");
+const Form = () => {  
+    // const collectionRef = collection(database, "food-info");
 
     const navigate = useNavigate();
+		const dispatch = useDispatch();
+
+		// const handleAddFood = (values) => {
+		// 	utils.post('/food.json', values).then(
+		// 		response => console.log(response)
+		// 	)
+
+		// }
 
     //Forms with formik
     const formik = useFormik({
@@ -28,10 +33,12 @@ const Form = (props) => {
                 .required("Location is required"),
         }),
         onSubmit: (values) => {
-            // console.log(values);
-            props.adddata(values); 
-            addDoc(collectionRef, values);
-            navigate("/success");
+            console.log(values);
+						dispatch(addFoodToFirestore(values));
+						// handleAddFood(values);
+            // props.adddata(values); 
+            // addDoc(collectionRef, values);
+            navigate("/free-food/success");
             // router.push({pathname: '/success', query: values})
             //values = {name: 'Han', location: 'Collis', servings: 2, tags: 'None'}
         }
@@ -46,7 +53,7 @@ const Form = (props) => {
             </div>
             </div>
             <div id="main-content" style={{marginTop: '100px'}}>
-                <NavLink to="/" activestyle="true">
+                <NavLink to="/free-food" activestyle="true">
                 <div id="fourth" className="myButton">
                     Back to Free Food 
                 </div>
@@ -109,23 +116,16 @@ const Form = (props) => {
 
                         {/* <div> */}
                             <button className="submitButton" style={{marginTop: "10px"}} type="submit" >Submit</button>
-                        {/* </div> */}
-                        
-                            
-
-                        
+                        {/* </div> */} 
                     </form>
-
-                </div>
-                
+                </div> 
             </div>
-            
         </div>
     )
 };
 
 
-export default connect(null, {adddata})(Form);
+export default Form;
 
 // myArray = []
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useRouter } from "next/router";
 
 
 const Success = () => {
@@ -19,13 +18,13 @@ const Success = () => {
                     </h1>
                     
                 </div>
-                <NavLink to="/" activestyle="true">
+                <NavLink to="/free-food" activestyle="true">
                 <div id="fourth" className="myButton">
                     Back to Free Food 
                 </div>
                 </NavLink>
 
-                <NavLink to="/submission" activestyle="true">
+                <NavLink to="/free-food/submission" activestyle="true">
                 <div id="fourth" className="myButton">
                     Back to Submission Form 
                 </div>

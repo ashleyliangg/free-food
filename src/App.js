@@ -1,20 +1,15 @@
-import React, { useContext, useEffect } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { useState } from "react";
-import Card from './components/card.js';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Home from './pages/home';
-import Form from './pages/form';
-import Success from './pages/success';
-import { FirebaseContext } from './firebase/firebase';
-import { useSelector } from 'react-redux';
+import Home from './components/home';
+import Form from './components/form';
+import Success from './components/success';
 
 
 function App() {
   
-  const { app, api } = useContext(FirebaseContext);
-  const foods = useSelector(state => state.foods);
+  // const { app, api } = useContext(FirebaseContext);
+  // const foods = useSelector(state => state.foods);
 
   // useEffect(() => {
   //   api.getFoods();
@@ -24,9 +19,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-            <Route path='/' element={<Home />} exact/>
-            <Route path='/submission' element={<Form/>} />
-            <Route path='/success' element={<Success/>} />
+            <Route path='/free-food' element={<Home />} exact/>
+            <Route path='/free-food/submission' element={<Form/>} />
+            <Route path='/free-food/success' element={<Success/>} />
         </Routes>
       </div>
     </Router>

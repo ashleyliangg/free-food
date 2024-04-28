@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -8,6 +8,7 @@ import { getFirestore } from 'firebase/firestore';
 const firebaseConfig = {
   apiKey: "AIzaSyB8le71ZD-VXnrtSES89GG02f_cKkHwbgY",
   authDomain: "free-food-2b96f.firebaseapp.com",
+  databaseURL: "https://free-food-2b96f-default-rtdb.firebaseio.com",
   projectId: "free-food-2b96f",
   storageBucket: "free-food-2b96f.appspot.com",
   messagingSenderId: "430950225726",
@@ -15,5 +16,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const database = getFirestore(app);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+export default db;
