@@ -9,10 +9,7 @@ export const addFoodToFirestore = createAsyncThunk(
 	'food/addFoodToFirestore',
 	async (food) => {
 		try {
-			console.log(food);
-			console.log(db);
 			const addFoodRef = await addDoc(collection(db, FOOD_COL), food);
-			console.log('hello');
 			const newFood = { id: addFoodRef.id, food }
 			return newFood;
 		}
@@ -61,7 +58,6 @@ export const updateFood = createAsyncThunk(
   'food/updateFood',
   async(updatedFood)=>{
     const foods = await getDocs(collection(db, FOOD_COL));
-		console.log(updatedFood.id)
     for(var snap of foods.docs){
       if(snap.id === updatedFood.id){
         const foodRef = doc(db, FOOD_COL, snap.id);

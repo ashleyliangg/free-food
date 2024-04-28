@@ -6,8 +6,8 @@ import { fetchFoods } from "../redux/foodSlice.js";
 
 const Home = () => {
 	const foods = useSelector((state) => state.foods.foodsArray);
-	console.log(foods);
 	const dispatch = useDispatch();
+
 	useEffect(() => {
 		dispatch(fetchFoods());
 	}, [dispatch])
@@ -54,4 +54,3 @@ const Home = () => {
 };
 
 export default Home;
-// export default connect(mapStateToProps, { adddata })(Home);

@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-
 const Success = () => {
     return (
         <div>
@@ -11,19 +10,16 @@ const Success = () => {
             </div>
             </div>
             <div id="main-content" style={{marginTop: '100px'}}>
-
                 <div style={{backgroundColor: '#CBF9E0', width: '50vw', margin: 'auto', paddingTop: '1rem', paddingBottom: '1rem', marginTop: '1rem', marginBottom: '1rem', borderRadius: '15px'}}>
                     <h1>
                     Thanks for sharing!
                     </h1>
-                    
                 </div>
                 <NavLink to="/free-food" activestyle="true">
                 <div id="fourth" className="myButton">
                     Back to Free Food 
                 </div>
                 </NavLink>
-
                 <NavLink to="/free-food/submission" activestyle="true">
                 <div id="fourth" className="myButton">
                     Back to Submission Form 
@@ -32,7 +28,6 @@ const Success = () => {
             </div>
         </div>
     )
-
 }
 
 export default Success;
