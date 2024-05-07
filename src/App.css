@@ -8,33 +8,21 @@
 
 .cardbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   padding: 20px;
-  /* width: 200px; */
-  /* height: 250px; */
-}
-
-.innerbox {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
+	box-sizing: border-box;
   margin-bottom: 10px;
-/* 
-  position: absolute; */
   width: 300px;
-  height: 270px;
-
   border-radius: 5%;
-
-  background: #F5F5DC;
+	background: #ffefbf;
   border: 2px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .cardheader {
   text-align: center;
+	font-family: Trebuchet MS;
   font-size: 20px;
 }
 
@@ -44,20 +32,6 @@ body {
 
 }
 
-/* .tile {
-  box-sizing: border-box;
-  background: #F4F5F4;
-  border-radius: 5px;
-  border: 0px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0,   0.25);
-  width:250px; 
-  max-width:250px;
-  height: 200px;
-  max-height: 250;
-  text-align: center;
-  line-height: 200px;
-} */
-
 .tiles {
   display: flex;
   flex-wrap: wrap;
@@ -65,23 +39,13 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #81F6B0;
-  /* padding: 20px; */
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
-  /* margin: 20px; */
-  /* margin-left: 20px;
-  margin-right: 20px; */
-  
 }
 
 .header {
   background-color: #60F3A2;
   border-color: #60F3A2;
-
   margin: 1%;
-
   text-align: left;
-  
 }
 
 div#banner { 
@@ -102,7 +66,6 @@ div#banner-content {
   background-color: #51E28B;
   font-family: Inter;
   font-weight: bolder;
-/*   font-style: Italic; */
   font-size: 2em;
 }
 div#main-content { 
@@ -110,8 +73,6 @@ div#main-content {
   background-color: #81F6B0;
   font-family: Inter;
 }
-
-/* This*/
 
 div#header {
   width: 100%;
@@ -181,7 +142,6 @@ div#fourth {
   display: flex;
   padding: 2px;
   align-items: center;
-/*   max-width: 50%; */
   justify-content: center;
 }
 
@@ -192,7 +152,7 @@ div#fourth {
   flex-direction: row;
   height: 80px;
   border: 1px red solid;
-  padding: 5px; /* this */
+  padding: 5px;
   box-sizing: border-box;
   background: #F4F5F4;
   border-radius: 5px;
@@ -216,12 +176,35 @@ div#fourth {
  border-radius: 10px;
  display: inline-block;
 }
-/* .myButton:hover{
- background-color: #d35aab;
-} */
 
-.myButton:active{
+.myButton:hover{
  transform: scale(0.95);
+}
+
+.actionButton{
+	cursor: pointer;
+	color: #000;
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 800;
+	font-style: normal;
+	text-decoration: none;
+	padding: 14px 15px;
+	border-radius: 10px;
+	display: inline-block;
+	background-color: #fff9e6;
+  border-width: 2px 4px 4px 2px;
+	border-style: solid;
+	border-color: #ffe699;
+	margin: 5px;
+}
+.actionButton:hover{
+	transform: scale(0.95);
+ }
+
+.flexContainer {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .submitButton{
@@ -238,14 +221,22 @@ div#fourth {
   display: inline-block;
  }
  .submitButton:hover{
-  background-color: #51E28B;;
- }
- 
- .submitButton:active{
-  transform: scale(0.95);
+  background-color: #51E28B;
+	transform: scale(0.95);
  }
 
  .error {
   color: red;
   font-size: 12px;
+ }
+
+ .tag {
+	font-size: 0.8rem;
+	color: rgb(114, 113, 113);
+	margin: 5px 0;
+	font-family: Intel;
+	background-color: #ffe699;
+	border-radius: 5px;
+	margin: 0 5px;
+	padding: 5px;
  }

@@ -24,7 +24,15 @@ const Form = () => {
 				.required("Location is required"),
 		}),
 		onSubmit: (values) => {
-			dispatch(addFoodToFirestore(values));
+			const tags = [];
+			values.tags.split(",").forEach(tag => {
+				tag = tag.trim();
+				if (tag.length !== 0) {
+					tags.push(tag);
+				}
+			});
+			const newValues = { ...values, tags: tags };
+			dispatch(addFoodToFirestore(newValues));
 			navigate("/free-food/success");
 		}
 	});
@@ -73,7 +81,7 @@ const Form = () => {
 						</div>
 
 						<div>
-							<p>Amount of Servings Available</p>
+							<p>Estimated Amount of Servings Available</p>
 							<input
 								id="servings"
 								type="number"
@@ -85,7 +93,7 @@ const Form = () => {
 						</div>
 
 						<div>
-							<p>Any Labels/Allergens? Vegan, GF, Peanuts</p>
+							<p>Any Labels/Allergens? Separate by commas eg: Vegan, GF, Peanuts</p>
 							<input
 								id="tags"
 								type="text"
@@ -105,10 +113,3 @@ const Form = () => {
 
 
 export default Form;
-
-// myArray = []
-
-// module.exports = {
-//     Form,
-//     myArray
-// }
