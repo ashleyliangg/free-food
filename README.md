@@ -8,6 +8,8 @@ This website displays free food around campus. The finished project will be that
 ## How to run this locally
 `npm start`
 
+## View at
+https://ashleyliangg.github.io/free-food/
 
 ### Credits
 I want to credit Hermia for the initial design for the home page as well as Ben Levesque for a lot of the .css styling and initial homepage skeleton.
