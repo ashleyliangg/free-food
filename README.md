@@ -19,3 +19,10 @@ I decided to build upon this project more this term; I wanted to create some sor
 
 I learned more about the Redux toolkit and Firebase through this project.
 
+## Screenshots
+Sorry my screen recordings stopped working because my laptop is low on storage :(
+<img width="1427" alt="image" src="https://github.com/ashleyliangg/free-food/assets/102703391/ae65ce0c-68c7-4235-891f-9ac505ab50b8">
+<img width="1419" alt="image" src="https://github.com/ashleyliangg/free-food/assets/102703391/2bd97cf9-8123-48a8-af91-0db5148032c6">
+<img width="1426" alt="image" src="https://github.com/ashleyliangg/free-food/assets/102703391/eeac60be-ae62-4e4e-8d1e-9691ac83fb56">
+
+
