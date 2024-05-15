@@ -24,7 +24,6 @@ const Card = (props) => {
 	}
 	return (
 		<div className="cardbox">
-			{/* <div className="innerbox"> */}
 				<p className='cardheader' style={{alignSelf: 'center'}}><b>{name}</b></p>
 				<p><GoLocation style={{ marginRight: '5px' }} />{location}</p>
 				<p><FiCoffee style={{ marginRight: '5px' }} />{servings} servings left</p>
@@ -33,14 +32,12 @@ const Card = (props) => {
 					tags.length > 0 ? tags.map((tag, i) => (<span key={i} className='tag'>{tag}</span>)) : ""
 				}
 				</p>
-			{/* </div> */}
 			<div className='flexContainer'>
 				<div className="actionButton"
 					onClick={() => {
 						props.setClaimedItem(props.food.name);
 						handleClaimed(props.food);
 						props.handleOpen();
-						// alert('Item claimed!');
 					}}
 				>
 					Claim me
